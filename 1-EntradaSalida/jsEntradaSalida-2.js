@@ -2,9 +2,9 @@
 y luego mostrarlo por 'alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-	var mensaje;
-    mensaje = prompt("HOla");
-   alert("adios")
+    var mensaje;
+        mensaje = prompt("En que estoy pensando?");
+        alert("a si es verdad!")
   
     
 }
