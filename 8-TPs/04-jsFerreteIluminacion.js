@@ -20,20 +20,50 @@ function CalcularPrecio() {
    if (lamparitas >= 6) {
       //0.5= 50/100
       precioConDescuento = precio * lamparitas * 0.5;
-   } else if (lamparitas == 5 && empresa == "ArgentinaLuz") {
-      precioConDescuento = precio * lamparitas * 0.4;
-   } else if (lamparitas == 5 && empresa != "ArgentinaLuz") {
-      precioConDescuento = precio * lamparitas * 0.3;
-   } else if (lamparitas == 4 && (empresa == "ArgentinaLuz" || empresa == "FelipeLamparas")) {
-      precioConDescuento = precio * lamparitas * 0.25;
-   } else if (lamparitas == 4 && (empresa == "JeLuz" || empresa == "HazIluminacion" || empresa == "Osram")) {
-      precioConDescuento = precio * lamparitas * 0.20;
-   } else if (lamparitas == 3 && empresa == "ArgentinaLuz") {
-      precioConDescuento = precio * lamparitas * 0.15;
-   } else if (lamparitas == 3 && empresa == "FelipeLamparas") {
-      precioConDescuento = precio * lamparitas * 0.10;
-   } else if (lamparitas == 3 && empresa != "ArgentinaLuz" && empresa != "FelipeLamparas") {
-      precioConDescuento = precio * lamparitas * 0.05;
+   } else if (lamparitas == 5) {
+      switch(empresa){
+         case "ArgentinaLuz":
+         precioConDescuento = precio * lamparitas * 0.4;
+         break
+      }}else if (lamparitas == 5) {
+         switch(empresa){
+            case "FelipeLamparas":
+            case "JeLuz":
+            case "HazIluminacion":
+            case "Osram":
+            precioConDescuento = precio * lamparitas * 0.3;
+            break
+         }} else if (lamparitas == 4) {
+            switch(empresa){
+               case "ArgentinaLuz":
+               case "FelipeLamparas":
+               precioConDescuento = precio * lamparitas * 0.25;
+               break
+            }} else if (lamparitas == 4) {
+               switch(empresa){
+                  case "JeLuz":
+                  case "HazIluminacion":
+                  case "Osram":
+                  precioConDescuento = precio * lamparitas * 0.20;
+                  break
+               }}else if (lamparitas == 3) {   
+                  switch(empresa){
+                     case "ArgentinaLuz":
+                     precioConDescuento = precio * lamparitas * 0.15;
+                     break
+                  }}else if (lamparitas == 3) {
+                     switch(empresa){
+                        case "FelipeLamparas":
+                        precioConDescuento = precio * lamparitas * 0.10;
+                        break
+                     }}else if (lamparitas == 3) {
+                        switch(empresa){
+                           case "JeLuz":
+                           case "HazIluminacion":
+                           case "Osram":
+                           precioConDescuento = precio * lamparitas * 0.05;
+                           break
+                        }
    }
    if (precioConDescuento > 120) {
       precioConDescuento = precio * lamparitas * 1.10;
